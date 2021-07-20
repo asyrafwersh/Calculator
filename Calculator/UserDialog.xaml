@@ -1,0 +1,30 @@
+﻿<Window x:Class="Calculator.UserDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="User Dialog" Height="400" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*" MinHeight="40"/>
+            <RowDefinition Height="1*" MinHeight="40"/>
+            <RowDefinition Height="0.8*" MinHeight="40"/>
+            <RowDefinition Height="1*" MinHeight="40"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="2*" MinWidth="60"/>
+            <ColumnDefinition Width="3*" MinWidth="60"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="username :" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="47,0,0,0"/>
+        <TextBox x:Name="registerTxtBox" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center"/>
+        <TextBlock x:Name="registerErrorTxtBox" Grid.Row="3" Grid.Column="2" Text="username not found.&#x0a;Please register." Foreground="Red"/>
+        <Button Grid.Row="4" Grid.Column="2" Content="Register" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Register_Click" MinWidth="80" MinHeight="30"/>
+    
+    </Grid>
+</Window>
